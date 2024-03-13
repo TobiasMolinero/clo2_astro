@@ -1,4 +1,51 @@
 ---
-
+import patogeno from '../assets/patogeno.jpg';
+import exportacion from '../assets/exportacion2.jpg';
 ---
 
+<section id="nosotros" class="p-[100px]">
+    <article class="">
+        <h2 class="font-[Poppins] font-[400] text-[35px] text-[var(--verde)]">¿Quiénes somos?</h2>
+        <p class="font-[Roboto] text-[#3d3d3d]">Somos un equipo multidisciplinario de profesionales, trabajando con el gas biocida Dióxido de cloro y otras herramientas, generando la aplicación efectiva y eficiente en ambientes, superficies y efluentes para el control de distintos patógenos como virus, hongos y bacterias sin dejar rastros de residuos quimicos.</p>
+    </article>
+    <article class="mt-[50px] flex flex-col gap-[50px]">
+        <div class="flex h-[400px]">
+            <div class="w-[50%]">
+                <img src={patogeno.src} class="w-[100%] h-[100%] object-cover shadow-[-10px_15px_0_5px_#ced89c]" loading="lazy" alt="patogeno" />
+            </div>
+            <div class="w-[50%] pl-[20px]">
+                <h3 class="font-[Poppins] font-[400] text-[25px] text-[var(--verde)]">Tecnología efectiva y eficiente de gas</h3>
+                <p class="font-[Roboto] text-[#3d3d3d] mt-[10px]">Nuestra empresa radicada en Concepción, provincia de Tucumán, trabaja e investiga el manejo desde 2014, obteniendo resultados positivos en la <span class="text-[var(--azul-claro)]">eliminación de todo tipo de patógenos, eliminando en forma radical virus, bacterias y hongos en los ambientes tratados.</span></p>
+                <p class="font-[Roboto] text-[#3d3d3d] mt-[10px]">El CLO2 penetra efectivamente en todo posible foco o colonía séptica gracias a su correcta pulverización y esto permite ser utilizado en:</p>
+                <ul class="font-[Roboto] text-[#3d3d3d] mt-[20px] pl-[20px] list-disc">
+                    <li>Arandanos, limones y otras frutas,</li>
+                    <li>Tratamiento de efluentes de ingenios,</li>
+                    <li>Purificación del agua,</li>
+                    <li>Hospitales,</li>
+                    <li>Edificios públicos</li>
+                </ul>
+            </div>
+        </div>
+        <div class="exportacion flex gap-[20px] h-[400px]">
+            <div class="w-[50%]">
+                <p class="font-[Roboto] text-[#3d3d3d]">Empresas exportadoras nos han confiado esta tarea para que su valorizada mercadería lleguen a puertos y aeropuertos de todo el mundo como Rusia, USA, China y Europa libre de patógenos, <span>cumpliendo con las reglamentaciones sanitarias de los países recibidores, teniendo que realizar la tarea de sanitización de los ambientes de trabajo y mercadería para cumplir con dicho objetivo.</span></p>
+            </div>
+            <div class="w-[50%]">
+                <img src={exportacion.src} class="w-[100%] h-[100%] object-cover shadow-[10px_15px_0_5px_#ced89c]" loading="lazy" alt="exportacion"/>
+            </div>
+        </div>
+    </article>
+</section>
+
+<style>
+    .exportacion{
+        background: linear-gradient(
+            to bottom,
+            #fff,
+            transparent
+        ),
+        url('../assets/world_map.svg');
+        background-size: cover;
+        background-position: center;
+    }
+</style>
