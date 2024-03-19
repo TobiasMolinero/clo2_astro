@@ -10,22 +10,22 @@ import logo from '../assets/logo.png';
         <i id="botonCerrarMenu" class="bi bi-x-lg text-[30px] text-end p-3 cursor-pointer lg:hidden"></i>
         <ul class="flex gap-x-12 flex-col gap-y-5 w-[100vw] h-[100vh] lg:flex-row lg:bg-inherit lg:h-[20px] lg:w-[100%]">
             <li class="text-center">
-                <a href="#inicio" class="hover:text-[#17a2da] hover:drop-shadow-[0_0_2px_#17a2da]">
+                <a href="#inicio" class="link hover:text-[#17a2da] hover:drop-shadow-[0_0_2px_#17a2da]">
                     Inicio
                 </a>
             </li>
             <li class="text-center">
-                <a href="#nosotros" class="hover:text-[#17a2da] hover:drop-shadow-[0_0_2px_#17a2da]">
+                <a href="#nosotros" class="link hover:text-[#17a2da] hover:drop-shadow-[0_0_2px_#17a2da]">
                     Nosotros
                 </a>
             </li>
             <li class="text-center">
-                <a href="#servicios" class="hover:text-[#17a2da] hover:drop-shadow-[0_0_2px_#17a2da]">
+                <a href="#servicios" class="link hover:text-[#17a2da] hover:drop-shadow-[0_0_2px_#17a2da]">
                     Servicios
                 </a>
             </li>
             <li class="text-center">
-                <a href="" class="hover:text-[#17a2da] hover:drop-shadow-[0_0_2px_#17a2da]">
+                <a href="#contacto" class="link hover:text-[#17a2da] hover:drop-shadow-[0_0_2px_#17a2da]">
                     Contacto
                 </a>
             </li>
@@ -46,6 +46,7 @@ import logo from '../assets/logo.png';
     const botonAbrirMenu = document.getElementById("botonAbrirMenu");
     const botonCerrarMenu = document.getElementById("botonCerrarMenu");
     const menu = document.getElementById("menu");
+    const links = document.querySelectorAll(".link");
 
     let menuAbierto = false;
 
@@ -61,4 +62,7 @@ import logo from '../assets/logo.png';
 
     botonAbrirMenu.addEventListener('click', abrirCerrarMenu);
     botonCerrarMenu.addEventListener('click', abrirCerrarMenu);
+    links.forEach(link => {
+        link.addEventListener('click', abrirCerrarMenu);
+    })
 </script>
