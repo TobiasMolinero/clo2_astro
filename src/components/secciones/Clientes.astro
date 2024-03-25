@@ -1,7 +1,7 @@
 ---
-import citromax from '../assets/citromax.jpg';
-import fabrica from '../assets/fabrica.png';
-import blueberries from '../assets/logoblueberries2.jpg';
+import citromax from '../../assets/citromax.jpg';
+import fabrica from '../../assets/fabrica.png';
+import blueberries from '../../assets/logoblueberries2.jpg';
 ---
 
 <section class="clientes">
@@ -12,15 +12,15 @@ import blueberries from '../assets/logoblueberries2.jpg';
                 <img src={citromax.src} alt="Citromax Argentina" class="h-[150px] w-[150px]">
             </div>
             <div class="flex flex-col gap-y-[5px]">
-                <img src={fabrica.src} alt="Calcerano" class="h-[150px] w-[150px] bg-white">
+                <img src={fabrica.src} alt="Calcerano" class="fabrica h-[150px] w-[150px] bg-white">
                 <h4 class="font-[Poppins] font-[500] text-[18px] text-center text-[]">Calcerano</h4>
             </div>
             <div class="flex flex-col gap-y-[5px]">
-                <img src={fabrica.src} alt="Vicente Trapani" class="h-[150px] w-[150px] bg-white">
+                <img src={fabrica.src} alt="Vicente Trapani" class="fabrica h-[150px] w-[150px] bg-white">
                 <h4 class="font-[Poppins] font-[500] text-[18px] text-center text-[]">Vicente Trapani</h4>
             </div>
             <div class="flex flex-col gap-y-[5px]">
-                <img src={fabrica.src} alt="Ingenio Trinidad" class="h-[150px] w-[150px] bg-white">
+                <img src={fabrica.src} alt="Ingenio Trinidad" class="fabrica h-[150px] w-[150px] bg-white">
                 <h4 class="font-[Poppins] font-[500] text-[18px] text-center text-[]">Ingenio Trinidad</h4>
             </div>
             <div class="">
@@ -30,16 +30,8 @@ import blueberries from '../assets/logoblueberries2.jpg';
     </div>
 </section>
 
-<!-- <style>
-    .clientes{
-        background: linear-gradient(
-            to bottom,
-            rgba(0, 0, 0, 0.7),
-            rgba(0, 0, 0, 0.7)
-            ),
-            url('../assets/saludo.jpg');
-        background-size: cover;
-        background-position: top;
-        background-attachment: fixed;
+<style>
+    .fabrica{
+        opacity: 0.4;
     }
-</style> -->
+</style>

@@ -1,0 +1,48 @@
+---
+---
+
+<script>
+    const botonWsp = document.getElementById('botonWsp');
+    window.addEventListener("scroll", () => {
+    // Obtener la posición actual del scroll
+    var scrollPosition = window.scrollY || document.documentElement.scrollTop;
+
+    // Agregar o quitar las clases según la posición del scroll
+    if (scrollPosition > 100) {
+      botonWsp.classList.remove("hidden")
+      botonWsp.classList.add("showed")
+    } else {
+      botonWsp.classList.remove("showed")
+      botonWsp.classList.add("hidden")
+    }
+  });
+</script>
+
+<button id="botonWsp" class="hidden fixed bottom-[50px] right-[50px] h-[80px] w-[80px] rounded-[100%] bg-[#25D366]">
+    <i class="bi bi-whatsapp text-[40px] text-white rounded-full w-[100%] h-[100%] flex justify-center items-center" />
+</button>
+
+<style>
+    .hidden{
+        opacity: 0;
+    }
+
+  .showed{
+    z-index: 1;
+    animation: revelarBoton 1.15s;
+    box-shadow: 2px 2px 5px #00000060;
+    transition: box-shadow 0.3s
+  }
+  .showed:hover{
+    box-shadow: 0 0 6px #25D366;
+  }
+
+  @keyframes revelarBoton {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+</style>
