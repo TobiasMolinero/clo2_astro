@@ -19,13 +19,15 @@
 </script>
 
 <button id="botonWsp" class="hidden fixed bottom-[50px] right-[50px] h-[80px] w-[80px] rounded-[100%] bg-[#25D366]">
+  <a href="https://wa.me/+5493865690287" target="_blank">
     <i class="bi bi-whatsapp text-[40px] text-white rounded-full w-[100%] h-[100%] flex justify-center items-center" />
+  </a>
 </button>
 
 <style>
-    .hidden{
-        opacity: 0;
-    }
+  .hidden{
+    opacity: 0;
+  }
 
   .showed{
     z-index: 1;
@@ -43,6 +45,20 @@
     }
     to {
       opacity: 1;
+    }
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 640px) {
+    .showed{
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      height: 65px;
+      width: 65px;
+    }
+
+    .showed i{
+      font-size: 35px;
     }
   }
 </style>
