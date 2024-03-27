@@ -2,13 +2,69 @@
 import logo from '/public/imagenes/logo.png';
 ---
 
+<script>
+    const botonAbrirMenu = document.getElementById("botonAbrirMenu");
+    const botonCerrarMenu = document.getElementById("botonCerrarMenu");
+    const menu = document.getElementById("menuResponsive");
+    const links = document.querySelectorAll(".link");
+
+    let menuAbierto = false;
+
+    const abrirCerrarMenu = () => {
+        if(botonAbrirMenu.style.display === 'none' && botonCerrarMenu.style.display === 'none'){
+            return null;
+        } else {
+            console.log(botonCerrarMenu.style)
+            if(menuAbierto){
+                menu.style.transform = "translateY(-1500px)";
+                menu.style.opacity = '0';
+                menuAbierto = false;
+            } else {
+                menu.style.transform = "translate(0px)";
+                menu.style.opacity = '1';
+                menuAbierto = true;
+            }
+        }
+    }
+
+    botonAbrirMenu.addEventListener('click', abrirCerrarMenu);
+    botonCerrarMenu.addEventListener('click', abrirCerrarMenu);
+    links.forEach(link => {
+        link.addEventListener('click', abrirCerrarMenu);
+    })
+</script>
+
 <header class="absolute top-0 left-0 w-full bg-[transparent] flex justify-between items-center p-4">
     <div class="text-white">
         <img src={logo.src} alt="logo" class="h-[80px]">
     </div>
     <nav id="menu" class="flex flex-col text-white font-[Roboto] font-[400] absolute top-[0] right-[0] bg-[var(--verde)] translate-y-[-1500px] z-10 transition-all lg:static lg:translate-y-0 lg:transition-none lg:bg-[inherit] lg:opacity-1">
-        <i id="botonCerrarMenu" class="bi bi-x-lg text-[30px] text-end p-3 cursor-pointer lg:hidden"></i>
         <ul class="flex gap-x-12 flex-col gap-y-5 w-[100vw] h-[100vh] lg:flex-row lg:bg-inherit lg:h-[20px] lg:w-[100%]">
+            <li class="text-center">
+                <a href="#inicio" class="hover:text-[#17a2da] hover:drop-shadow-[0_0_2px_#17a2da]">
+                    Inicio
+                </a>
+            </li>
+            <li class="text-center">
+                <a href="#nosotros" class="hover:text-[#17a2da] hover:drop-shadow-[0_0_2px_#17a2da]">
+                    Nosotros
+                </a>
+            </li>
+            <li class="text-center">
+                <a href="#servicios" class="hover:text-[#17a2da] hover:drop-shadow-[0_0_2px_#17a2da]">
+                    Servicios
+                </a>
+            </li>
+            <li class="text-center">
+                <a href="#contacto" class="hover:text-[#17a2da] hover:drop-shadow-[0_0_2px_#17a2da]">
+                    Contacto
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <nav id="menuResponsive" class="flex flex-col text-white font-[Roboto] font-[400] fixed top-[0] right-[0] bg-[var(--verde)] translate-y-[-1500px] h-[100vh] z-10 transition-all">
+        <i id="botonCerrarMenu" class="bi bi-x-lg text-[30px] text-end p-3 cursor-pointer"></i>
+        <ul class="flex gap-x-12 flex-col gap-y-5 w-[100vw] lg:flex-row lg:bg-inherit lg:h-[20px] lg:w-[100%]">
             <li class="text-center">
                 <a href="#inicio" class="link hover:text-[#17a2da] hover:drop-shadow-[0_0_2px_#17a2da]">
                     Inicio
@@ -42,29 +98,14 @@ import logo from '/public/imagenes/logo.png';
 </header>
 
 
-<script>
-    const botonAbrirMenu = document.getElementById("botonAbrirMenu");
-    const botonCerrarMenu = document.getElementById("botonCerrarMenu");
-    const menu = document.getElementById("menu");
-    const links = document.querySelectorAll(".link");
-
-    let menuAbierto = false;
-
-    const abrirCerrarMenu = () => {
-        if(menuAbierto){
-            menu.style.transform = "translateY(-1500px)";
-            menu.style.opacity = '0';
-            menuAbierto = false;
-        } else {
-            menu.style.transform = "translate(0px)";
-            menu.style.opacity = '1';
-            menuAbierto = true;
+<!-- <style>
+    @media screen and (min-width: 1024px) {
+        #botonCerrarMenu, .boton-abrir{
+            display: none;
         }
+        #menu{
+            background-color: red;
+        }
+        .caca{background: red;} 
     }
-
-    botonAbrirMenu.addEventListener('click', abrirCerrarMenu);
-    botonCerrarMenu.addEventListener('click', abrirCerrarMenu);
-    links.forEach(link => {
-        link.addEventListener('click', abrirCerrarMenu);
-    })
-</script>
+</style> -->
