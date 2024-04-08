@@ -6,16 +6,17 @@ import exportacion from '/public/imagenes/exportacion.webp';
 <section id="nosotros" class="py-[100px] px-[30px] lg:px-[100px]">
     <article class="">
         <h2 class="font-[Poppins] font-[400] text-[35px] text-[var(--verde)]">¿Quiénes somos?</h2>
-        <p class="font-[Roboto] text-[#3d3d3d]">Somos un equipo multidisciplinario de profesionales, trabajando con el gas biocida Dióxido de cloro y otras herramientas, generando la aplicación efectiva y eficiente en ambientes, superficies y efluentes para el control de distintos patógenos como virus, hongos y bacterias sin dejar rastros de residuos quimicos.</p>
+        <p class="font-[Roboto] text-[#3d3d3d] mt-[10px]">Somos un equipo multidisciplinario de profesionales, trabajando con el gas biocida Dióxido de cloro y otras herramientas, generando la aplicación efectiva y eficiente en ambientes, superficies y efluentes para el control de distintos patógenos como virus, hongos y bacterias sin dejar rastros de residuos quimicos. </p>
+        <p class="font-[Roboto] text-[#3d3d3d] mt-[10px]">Nos encargamos de generar un <span class="font-[700]">sistema</span> adecuado para cada situación especifica que se presenta. Como tambien la <span class="font-[700]">capacitación</span> necesaria para la utilización de dichos sistemas y el uso y manejo de los químicos a utilizar.</p>
     </article>
     <article class="mt-[50px] flex flex-col gap-[50px]">
         <div class="flex h-[400px] max-[480px]:flex-col max-[480px]:h-[inherit]">
             <div class="w-[50%]">
                 <img src={patogeno.src} class="w-[100%] h-[100%] object-cover shadow-[-10px_15px_0_5px_#ced89c] max-[480px]:hidden" loading="lazy" alt="patogeno" />
             </div>
-            <div class="w-[50%] h-[100%] pl-[20px] overflow-y-auto max-[480px]:w-[100%] max-[480px]:p-[0]">
+            <div class="seccion-con-scroll w-[50%] h-[100%] pl-[20px] overflow-y-auto max-[480px]:w-[100%] max-[480px]:p-[0]">
                 <h3 class="font-[Poppins] font-[400] text-[25px] text-[var(--verde)]">Tecnología efectiva y eficiente de gas</h3>
-                <p class="font-[Roboto] text-[#3d3d3d] mt-[10px]">Nuestra empresa radicada en El Molino, Chicligasta, provincia de Tucumán, trabaja e investiga el manejo desde 2011, obteniendo resultados positivos en la <span class="text-[var(--azul-claro)]">eliminación de todo tipo de patógenos, eliminando en forma radical virus, bacterias y hongos.</span> Generando un sistema de acuerdo a la situación a tratar.</p>
+                <p class="font-[Roboto] text-[#3d3d3d] mt-[10px]">Nuestra empresa radicada en El Molino, Chicligasta, provincia de Tucumán, trabaja e investiga el manejo desde 2011, obteniendo resultados positivos en la <span class="text-[var(--azul-claro)]">eliminación de todo tipo de patógenos, eliminando en forma radical virus, bacterias y hongos, así como tambien los olores producidos por químicos o de origen biológicos.</span> Generando un sistema de acuerdo a la situación a tratar.</p>
                 <p class="font-[Roboto] text-[#3d3d3d] mt-[10px]">El CLO2 penetra efectivamente en todo posible foco o colonía séptica gracias a su correcta aplicación y esto permite ser utilizado en:</p>
                 <ul class="font-[Roboto] text-[#3d3d3d] mt-[20px] pl-[20px] list-disc">
                     <li>Citrus y otras frutas y verduras. Prolongando asi su postcosecha,</li>
@@ -24,6 +25,7 @@ import exportacion from '/public/imagenes/exportacion.webp';
                     <li>Sanitización en instalaciones,</li>
                     <li>Sanitización en sistemas de salud,</li>
                     <li>Control ambiental en edificios publicos.</li>
+                    <li>Eliminación del foco de origen de distintos olores, ya sean de origen químico o biológico.</li>
                 </ul>
             </div>
         </div>
@@ -48,5 +50,10 @@ import exportacion from '/public/imagenes/exportacion.webp';
         url('/imagenes/world_map.svg');
         background-size: cover;
         background-position: center;
+    }
+
+    .seccion-con-scroll{
+        scrollbar-width: thin;
+        scrollbar-color: #ced89c transparent;
     }
 </style>
